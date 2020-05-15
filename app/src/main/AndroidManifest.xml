@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.inotou.android.kpi_sample_03">
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- メニュー -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 検索 -->
+        <activity android:name="jp.inotou.android.kpi_sample_03.ActivitySearch"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="jp.inotou.android.kpi_sample_03.ActivitySearch" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 新規登録 -->
+        <activity android:name="jp.inotou.android.kpi_sample_03.ActivityRegist"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="jp.inotou.android.kpi_sample_03.ActivityRegist" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 削除 -->
+        <activity android:name="jp.inotou.android.kpi_sample_03.ActivityDelete"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="jp.inotou.android.kpi_sample_03.ActivityDelete" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 確認 -->
+        <activity android:name="jp.inotou.android.kpi_sample_03.ActivityConfirm"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="jp.inotou.android.kpi_sample_03.ActivityConfirm" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name="jp.inotou.android.kpi_sample_03.service.ShainService"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="jp.inotou.android.kpi_sample_03.ShainService" />
+                <action android:name="jp.inotou.android.kpi_sample_03.INSERT" />
+                <action android:name="jp.inotou.android.kpi_sample_03.UPDATE" />
+                <action android:name="jp.inotou.android.kpi_sample_03.DELETE" />
+                <action android:name="jp.inotou.android.kpi_sample_03.SELECT" />
+            </intent-filter>
+        </service>
+        <receiver android:name="jp.inotou.android.kpi_sample_03.receiver.StartupReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <provider android:name="jp.inotou.android.kpi_sample_03.DbProvider"
+            android:authorities="jp.inotou.android.kpi_sample_03.dbprovider">
+        </provider>
+    </application>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+</manifest>

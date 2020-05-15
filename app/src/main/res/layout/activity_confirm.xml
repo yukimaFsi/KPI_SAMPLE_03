@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="410dp"
+        android:background="#2196F3"
+        android:text="社員データ管理システム"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="410dp"
+        android:background="#E6E2E2"
+        android:text="確認"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <TableLayout
+        android:layout_width="310dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="51dp"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="150dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_span="2"
+                android:text=""
+                android:textSize="24sp" />
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:textAlignment="center">
+            <!--空行-->
+            <TextView
+                android:id="@+id/textMessage"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_span="2"
+                android:text=""
+                android:textSize="24sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="150dp">
+            <!--空行-->
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_span="1"
+                android:text="　　"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="150dp">
+
+            <Button
+                android:id="@+id/btnBackToMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:width="200dp"
+                android:background="#71C2E9"
+                android:onClick="onClick"
+                android:text="メニューへ戻る"
+                android:textSize="24sp" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
